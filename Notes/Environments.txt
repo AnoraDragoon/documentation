@@ -1,0 +1,15 @@
+Environments
+
+
+Core
+
+
+Uganda
+UNBS
+User: root
+Key file: jenkins_id_rsa
+
+* Dev3
+webappunbs.tt079dev3.dev.sicpa.io
+* Dev4
+webappunbs.tt079dev4.dev.sicpa.io
