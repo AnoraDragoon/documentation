@@ -1,0 +1,54 @@
+Basics
+$ git status
+$ git add .
+$ git commit -m "${commit comment}"
+$ git push
+$ git pull
+
+Info
+$ git --version
+$ git status
+$ git show
+$ git log
+$ git log --stat
+$ git branch
+$ git branch --merged
+$ git branch -a
+$ git branch | grep ${pattern}
+$ git reflog --no-abbrev
+
+- Diff
+$ git diff
+$ git diff --name-status ${branch name}
+$ git diff ${branch name} -- ${path}
+
+Repository actions
+- initialization
+$ git clone ${repository route}
+$ git init
+- upload
+$ git push --set-upstream ${repository name} ${branch name}
+$ git push
+- download
+$ git pull
+$ git fetch
+$ git fetch --prune
+
+Branches actions
+$ git branch ${branch name}
+$ git checkout ${branch name}
+$ git checkout -b ${branch name}
+$ git branch -D ${branch name}
+$ git branch -D $(git branch | grep ${pattern})
+
+Config
+-global
+$ git config --global user.email "${user@email.com}"
+$ git config --global user.name "${User Name}"
+-local
+$ git config --local user.email "${user@email.com}"
+$ git config --local user.name "${User Name}"
+
+Advance
+$ git commit --amend
+$ git reset HEAD
