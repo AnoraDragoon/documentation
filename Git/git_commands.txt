@@ -15,6 +15,7 @@ $ git branch
 $ git branch --merged
 $ git branch -a
 $ git branch | grep ${pattern}
+$ git reflog --no-abbrev
 
 - Diff
 $ git diff
