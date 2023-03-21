@@ -11,11 +11,14 @@ $ git status
 $ git show
 $ git log
 $ git log --stat
+$ git log --all --graph --decorate --oneline
 $ git branch
 $ git branch --merged
 $ git branch -a
 $ git branch | grep ${pattern}
 $ git reflog --no-abbrev
+$ git remote
+$ git remote -v
 
 - Diff
 $ git diff
@@ -26,6 +29,8 @@ Repository actions
 - initialization
 $ git clone ${repository route}
 $ git init
+- config
+$ git remote add ${repository name} ${URL}
 - upload
 $ git push --set-upstream ${repository name} ${branch name}
 $ git push
@@ -33,6 +38,7 @@ $ git push
 $ git pull
 $ git fetch
 $ git fetch --prune
+$ git pull origin master --allow-unrelated-histories
 
 Branches actions
 $ git branch ${branch name}
@@ -40,6 +46,7 @@ $ git checkout ${branch name}
 $ git checkout -b ${branch name}
 $ git branch -D ${branch name}
 $ git branch -D $(git branch | grep ${pattern})
+$ git merge ${repository name} ${branch name} --allow-unrelated-histories
 
 Config
 -global
