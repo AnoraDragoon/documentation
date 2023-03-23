@@ -98,7 +98,7 @@ URL to config public ssh key in github
 https://github.com/settings/keys
 
 
-Tags y versiones en Git y GitHub
+## Tags y versiones en Git y GitHub (23/43)
 
 Crear un nuevo tag y asignarlo a un commit:
 $ git tag -a nombre-del-tag id-del-commit
@@ -130,7 +130,7 @@ Git log options
 --stat :
 
 
-Manejo de ramas en GitHub
+## Manejo de ramas en GitHub (24/43)
 
 Comandos para manejo de ramas en GitHub
 Crear una rama:
@@ -144,7 +144,54 @@ Publicar una rama local al repositorio remoto:
 $ git push origin nombre-de-la-rama
 
 
-Git Stash: Guardar cambios en memoria y recuperarlos después
+## Configurar múltiples colaboradores en un repositorio de GitHub (25/43)
+
+Cómo agregar colaboradores en Github
+Repositorio > Settings > Collaborators
+añadir el email o username de los nuevos colaboradores.
+
+Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal:
+$ git commit —amend
+Corregimos el mensaje
+Traer el repositorio remoto
+$ git pull origin master
+Ejecutar el cambio
+$ git push --set-upstream origin master
+
+
+## Utilizando Pull Requests en GitHub (28/43)
+
+Pull request es una funcionalidad de Github (en Gitlab llamada merge request y en Bitbucket push request), en la que un colaborador pide que revisen sus cambios antes de hacer merge a una rama, normalmente master (ahora conocida como main).
+Al hacer un pull request, se genera una conversación que pueden seguir los demás usuarios del repositorio, así como autorizar y rechazar los cambios.
+
+# Cómo se realiza un pull request
+Se trabaja en una rama paralela los cambios que se desean
+$ git checkout -b <rama>.
+Se hace un commit a la rama 
+$ git commit -am '<Comentario>'.
+Se suben al remoto los cambios 
+$ git push origin <rama>.
+En GitHub se hace el pull request comparando la rama master con la rama del fix.
+Uno, o varios colaboradores revisan que el código sea correcto y dan feedback (en el chat del pull request).
+El colaborador hace los cambios que desea en la rama y lo vuelve a subir al remoto (automáticamente jala la historia de los cambios que se hagan en la rama, en remoto).
+Se aceptan los cambios en GitHub.
+Se hace merge a master desde GitHub.
+
+
+## Creando un Fork, contribuyendo a un repositorio (29/43)
+
+Un fork es una bifurcación del repositorio completo.
+Los forks son una característica única de GitHub.
+Crea una copia exacta del estado actual de un repositorio directamente en GitHub, de la cual eres propietario.
+
+Agregar nuevo repositorio remoto.
+$ git remote add <nombre_del_remoto> <url_del_remoto>
+Hacer pull y push desde el nuevo remoto
+$ git pull <remoto> <rama>
+$ git push <remoto> <rama>
+
+
+## Git Stash: Guardar cambios en memoria y recuperarlos después (36/43)
 
 El stashed nos sirve para guardar cambios para después, Es una lista de estados que nos guarda algunos cambios que hicimos en Staging para poder cambiar de rama o branch sin perder el trabajo que todavía no guardamos en un commit
 Ésto es especialmente útil porque hay veces que no se permite cambiar de rama, ésto porque tenemos cambios sin guardar, no siempre es un cambio lo suficientemente bueno como para hacer un commit, pero no queremos perder ese código en el que estuvimos trabajando.
