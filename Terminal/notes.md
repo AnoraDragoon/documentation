@@ -45,3 +45,78 @@ $ rm -r ${dir name} ${dir name} ...
     -f or --force (de force) fuerza a borrar todo.
 
 ## Explorando el contenido de nuestros archivos (5/23)
+### Vistazo rápido al contenido usando los comandos Head y Tail
+$ head -n 20 proyecto.html
+$ less <file_dir>
+
+-n: Es una flag para los comandos `head` y `more` y se utiliza para espesificar al numero de lineas a visualizar.
+
+- less Details
+Ahora tendrás una especie de interfaz gráfica donde podrás inspeccionar el documento. Puedes usar las flechas y el scroll para moverte arriba y abajo.
+Además, puedes buscar palabras dentro del documento. Si presionas la tecla slash “/”, en la parte de abajo se habilitará un cuadro donde podrás buscar palabras, solo escribe y presiona enter.
+Para salir de la interfaz de less presiona “q”.
+
+### Tabla de comandos
+head	Muestra las primeras 10 líneas
+tail	Muestra las últimas 10 líneas
+less	Muestra todo el contenido dentro de la consola
+xdg-open	Abre un programa para inspeccionar ese archivo
+nautilus	Abre en la interfaz de ventanas la carpeta que selecciones
+
+## ¿Qué es un comando? (6/23)
+### Un comando pueden significar cuatro cosas:
+Un programa ejecutable
+Un comando de utilidad de la shell. Esto es un programa en sí mismo, que puede tener funciones. Ejemplo cd
+Una función de shell. Son funciones de shell externas al comando de utilidad. Ejemplo mkdir
+Un alias. Un ejemplo es `ls`
+
+### Ejemplos de comandos básicos de la terminal
+type <comando>: Nos permite conocer qué tipo de comando es 🤔.
+alias <alias>="<secuencia de comandos>": Nos permite crear comandos. Son temporales, se borran al cerrar la terminal 👶🏼.
+help <comando>: Nos permite consultar un poco de documentación de un comando 📄.
+man <comando>: De manual, nos permite conocer mucha más información de un comando.
+info <comando>: Similar al anterior, pero un poco resumido y con otro formato.
+whatis <comando>: Describe un comando en una sola línea ☺️. No funciona con todos.
+
+Si cerramos y volvemos a abrir la terminal, el alias creado con el comando alias se pierde.
+
+### Documentation
+[Comandos que debes conocer.](https://platzi.com/blog/41-comandos-terminal/)
+
+## Personalizar la terminal de comandos (21/23)
+1. Instala Tilix
+$ sudo apt install tilix
+
+2. Instala ZSH
+$ sudo apt install zsh
+
+Comando para dejar por DEFECTO la shell de bash o zsh:
+$ chsh -s $(which bash)
+$ chsh -s $(which zsh)
+
+Para cambiar entre bash y zsh en el momento o reinicial la shell actual:
+$ exec bash
+$ exec zsh
+
+3. Personaliza funcionalidades y colores
+Ahora, puedes ponerle funcionalidades y colores con OH-MY-ZSH
+$ sh-c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+4. Usa Power Level
+Vamos a instalarle un tema (powerLevel10K):
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+Documentation: https://github.com/romkatv/powerlevel10k#powerlevel10k
+Agregar powerlevel10 a ZSH:
+$ vim ~/.zshrc
+$ ZSH_THEME="powerlevel10k/powerlevel10k"
+
+Reconfigurar Powerlevel10k
+$ p10k configure
+
+### Documentation
+[Plati blog terminal](https://platzi.com/blog/terminal-en-big-sur-mas-bonita-que-nunca/)
+[Tilix&Color](https://gnunn1.github.io/tilix-web/)
+[iTerm2 - MacOS](https://iterm2.com/)
+[Oh My Zsh](https://ohmyz.sh/)
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+[Personaliza tu terminal con Oh My ZSH y Powerlevel10k | codevars](https://www.edevars.com/blog/personalizar-terminal)
