@@ -32,7 +32,6 @@ readAndUpdate(): void {
     });
 }
 
-
 ### ¿Callbacks independientes?
 Otra alternativa que brinda RxJS es la posibilidad de manipular varios observables al mismo tiempo. Con las promesas, puedes hacer uso de Promise.all([]) para realizar N procesamientos asincrónicos en paralelo y obtener sus resultados.
 De forma muy similar, en RxJS puedes hacer lo siguiente.
@@ -49,3 +48,9 @@ readAndUpdate(): void {
     const update = res[1];
   });
 }
+
+
+### Uso de interceptores (18/23)
+
+Crea el interceptor
+$ ng generate interceptor <interceptor_name>
