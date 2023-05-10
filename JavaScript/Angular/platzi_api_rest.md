@@ -1,3 +1,4 @@
+# Curso de Consumo de APIs REST con Angular
 
 ## Evitando el callback hell (15/23)
 
@@ -50,7 +51,18 @@ readAndUpdate(): void {
 }
 
 
-### Uso de interceptores (18/23)
+## Uso de interceptores (18/23)
 
 Crea el interceptor
 $ ng generate interceptor <interceptor_name>
+
+## Descarga de archivos con Http (21/23)
+
+### Option -1 (native HTML)
+Using a link with file route and download attribute:
+
+### Option -1 (HttpClient to download a generated file from and endpoint)
+Install libreria para tratamiento de archivos con HttpClient:
+$ npm i file-saver
+Install types for library. Types is usefull when you are working on TypeScript. It should be installed just for dev.
+$ npm install @types/file-saver --save-dev
