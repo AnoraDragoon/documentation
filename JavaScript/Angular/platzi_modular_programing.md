@@ -31,5 +31,26 @@ Crea un servicio al cual llamaremos CustomPreloadingStrategy con la siguiente l�
 El servicio implementa PreloadingStrategy y sobreescribiendo el método preload(), hace uso de la metadata para desarrollar tu propia lógica de renderizado de módulos.
 3. Importa tu estrategia
 Finalmente, importa tu estrategia personalizada en el routing.
+https://github.com/AnoraDragoon/platzi-angular-project/tree/angular-router-lazy-loading-y-programacion-modular
+commit: bff14a5bea8fefa02568ee5ba787d7d410a2a07f
 
--- Pending add route example for commit on platzy angular project
+## QuickLink Strategy (18/25)
+- Use this command to install Quick link library
+```
+$ npm i ngx-quicklink --save
+```
+  For versions lower than Angular 16 use:
+```
+$ npm install ngx-quicklink@0.2.7  --legacy-peer-deps
+```
+
+## Conoce a los Guardianes (19/25)
+Los Guardianes son clases que se utilizan para proteger y darle seguridad a las Rutas de nuestra aplicación.
+- Generate a guardian
+```
+$ ng generate guard <nombre-guard> 
+```
+  Short way
+```
+$  ng g g <nombre-guard>
+```
