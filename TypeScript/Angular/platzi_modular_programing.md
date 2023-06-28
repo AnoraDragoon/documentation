@@ -54,3 +54,6 @@ $ ng generate guard <nombre-guard>
 ```
 $  ng g g <nombre-guard>
 ```
+
+## Netlify Deployment (24/25)
+- Pendding
