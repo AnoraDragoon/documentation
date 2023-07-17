@@ -35,3 +35,69 @@ Ejemplo:
 ```
 $ npx webpack-bundle-analyzer dist/my-project/stats-es2015.json
 ```
+
+## Aplicando un Performance Budget desde el Angular CLI (5/23)
+Herramienta que permite estimar el rendimiento de nuestra aplicación.
+https://perf-budget-calculator.firebaseapp.com/
+
+- Es posible agregar el comando para generar el reporte de rendimiento y correrlo en la seción de scripts de:
+/// package.json
+```
+"analyze": "ng build --prod --stats-json && npx webpack-bundle-analyzer dist/platzi-store/stats-es2015.json"
+```
+
+## Implementando GuessJs (11/23)
+- Lecturas recomendadas
+https://github.com/guess-js/guess
+
+## Precarga con Service workers (12/23)
+
+To emprove your web performance you can use service worker.
+At its simplest, a service worker is a script that runs in the web browser and manages caching for an application. This reduce app loading time and improve user experience. A reliable Progressive Web App feels fast and dependable regardless of the network.
+
+- Lecturas recomendadas
+https://angular.io/guide/service-worker-getting-started
+
+- Adding a service worker to your project
+```
+$ ng add @angular/pwa --project <project-name>
+```
+
+To use PWA make a project build and run your building on a server.
+
+- Install http server:
+```
+$ npm install http-server -g
+```
+- Run building:
+```
+$ http-server /dist/<project-dir>
+```
+
+## ¿Qué es Server Side Render? (13/23)
+- Documentation: https://angular.io/guide/universal
+
+## Implementando Angular Universal (14/23)
+- Run the following command to add SSR support into your application:
+```
+$ ng add @nguniversal/express-engine
+```
+The command updates the application code to enable SSR and adds extra files to the project structure
+
+- Builds both the server script and the application in production mode. Use this command when you want to build the project for deployment.
+```
+$ ng build && ng run app-name:server
+```
+- Similar to ng serve, which offers live reload during development, but uses server-side rendering
+```
+$ npm run dev:ssr
+```
+
+## Cuidados con SSR y Angular (15/23)
+
+### Documentation
+- Angular Universal (github repo)
+https://github.com/angular/universal#angular-universal
+
+- Important Considerations when Using Angular Universal
+https://git.sicpa.com/projects/TTMA/repos/tt082-wa-material/pull-requests/285/overview
