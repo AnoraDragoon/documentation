@@ -101,3 +101,16 @@ https://github.com/angular/universal#angular-universal
 
 - Important Considerations when Using Angular Universal
 https://git.sicpa.com/projects/TTMA/repos/tt082-wa-material/pull-requests/285/overview
+
+## Optimización de componentes con OnPush (19/23)
+
+La estrategia por defecto de Detección de cambios en Angular empieza enla cima con los componentes en la raíz (AppComponent) y refesca los cambios a través de todo el árbol de componentes, recargando cada componente incluso si éste no ha cambiado.
+```
+@Component({
+    ...
+    changeDetection:ChangeDetectionStrategy.OnPush
+    // changeDetection:ChangeDetectionStrategy.Default
+})
+```
+La estrategía OnPush permite hacer la recarga solo en la rama afectada por el cambio. Lo cual evita recargas inecesarias y por consiguiente ejecuciones de metodos. Mejorarndo el rendimiento de nuestra aplicación.
+- "ChangeDetectionStrategy.Default" es la estrategia por defecto y se implementa si no se define ninguna.
