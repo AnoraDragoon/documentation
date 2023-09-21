@@ -114,3 +114,9 @@ La estrategia por defecto de Detección de cambios en Angular empieza enla cima 
 ```
 La estrategía OnPush permite hacer la recarga solo en la rama afectada por el cambio. Lo cual evita recargas inecesarias y por consiguiente ejecuciones de metodos. Mejorarndo el rendimiento de nuestra aplicación.
 - "ChangeDetectionStrategy.Default" es la estrategia por defecto y se implementa si no se define ninguna.
+
+## Subscribe (21/23)
+
+Las subscribciones con HttpClient no necesitan hacer unsubscribe, puesto que HttpClient finaliza la subscribcion una ves completada la petición.
+Pero otras subscribciones si es necesario finalizarlas una vez dejen de ser necesarias.
+
