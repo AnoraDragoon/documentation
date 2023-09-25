@@ -2,7 +2,7 @@
 
 ## Documentation
 
-- [Hola Mundo Channel](https://www.youtube.com/watch?v=6SGIFVJ5Izs)
+- [Hola Mundo Channel: configurando terminal en Windows 11](https://www.youtube.com/watch?v=6SGIFVJ5Izs)
 - [Oh My Posh](https://ohmyposh.dev/docs)
 
 ## Tutorial
@@ -97,7 +97,7 @@ New-Item -Path $PROFILE -Type File -Force
 - After that it is possible open `$PROFILE` with Notepad or VSCode.
 <br>
 From Terminal or Win+R run:
-<br>
+<!-- <br> -->
 ``notepad $PROFILE`` or ``code $PROFILE``
 
 - Type configuration command into PowerShell profile file:
@@ -134,7 +134,7 @@ notepad $PROFILE
 ```
 - And add a new line:
 <br>
-`Import-Module Terminal-Icons`
+```Import-Module Terminal-Icons```
 
 - To show Read line option as a list run:
 ```
