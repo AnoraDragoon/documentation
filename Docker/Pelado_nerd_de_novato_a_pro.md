@@ -13,7 +13,7 @@ https://youtu.be/CV_Uf3Dq-EU
 docker run image_name:tag
 ```
 
-  - The tag is optional and default tag is latest.
+- The tag is optional and default tag is latest.
 Example:
 ```
 docker run -e POSTGRES_PASSWORD=password postgres

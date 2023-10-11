@@ -81,7 +81,6 @@ Get-PoshThemes
 ```
 
 - Ctrl+click on theme name to open theme file.
-
 - Run next command to open Shell Profile file:
 ```
 notepad $PROFILE

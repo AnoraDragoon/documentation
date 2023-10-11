@@ -7,5 +7,5 @@ https://www.toptal.com/developers/gitignore
 
 https://typestrong.org/ts-node/
 
-Repository
+Repository:
 https://github.com/platzi/curso-typescript-tipos-avanzados/tree/step-1

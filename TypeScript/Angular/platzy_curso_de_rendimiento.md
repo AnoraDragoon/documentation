@@ -1,42 +1,50 @@
 # Curso de Rendimiento en Angular
 
 ## ¿Qué es un bundle size? Tree shaking y su importancia (2/23)
+
 - Bundle Size: Cuánto pesa en bytes.
 - Lazy loading: Técnica que modulariza la aplicación.
 
 JS realiza 4 pasos par ala carga de la app:
-    Descargar: este paso es el toma más tiempo.
-    Parsear
-    Compilarlo
-    Renderizarlo
+<br>
+Descargar: este paso es el toma más tiempo.
+<br>
+Parsear
+<br>
+Compilarlo
+<br>
+Renderizarlo
 
 tree shaking
-    Una técnica en la cual removemos las librerías y código que no se utiliza en la app.
+<br>
+Una técnica en la cual removemos las librerías y código que no se utiliza en la app.
 
 ## Implementando Webpack Bundle Analyzer (3/23)
+
 Webpack bundle analyzer: permite analizar los paquetes que utilizamos en nuestro proyecto
 It is a dev dependency.
 
 - Install: Webpack bundle analyzer
 ```
-$ npm install webpack-bundle-analyzer --save-dev
+npm install webpack-bundle-analyzer --save-dev
 ```
 - Compilar con la bandera "--stats-json" para generar un archivo de estadisticas
 ```
-$ ng build --prod --stats-json
+ng build --prod --stats-json
 ```
 - Ubicación del archivo de reporte.
 dist/my-project/stats-es2015.json
 - Correr el analizis en base al archivo generado
 ```
-$ npx webpack-bundle-analyzer <file_dir>
+npx webpack-bundle-analyzer <file_dir>
 ```
 Ejemplo:
 ```
-$ npx webpack-bundle-analyzer dist/my-project/stats-es2015.json
+npx webpack-bundle-analyzer dist/my-project/stats-es2015.json
 ```
 
 ## Aplicando un Performance Budget desde el Angular CLI (5/23)
+
 Herramienta que permite estimar el rendimiento de nuestra aplicación.
 https://perf-budget-calculator.firebaseapp.com/
 
@@ -60,42 +68,48 @@ https://angular.io/guide/service-worker-getting-started
 
 - Adding a service worker to your project
 ```
-$ ng add @angular/pwa --project <project-name>
+ng add @angular/pwa --project <project-name>
 ```
 
 To use PWA make a project build and run your building on a server.
 
 - Install http server:
 ```
-$ npm install http-server -g
+npm install http-server -g
 ```
+
 - Run building:
 ```
-$ http-server /dist/<project-dir>
+http-server /dist/<project-dir>
 ```
 
 ## ¿Qué es Server Side Render? (13/23)
+
 - Documentation: https://angular.io/guide/universal
 
 ## Implementando Angular Universal (14/23)
+
 - Run the following command to add SSR support into your application:
 ```
-$ ng add @nguniversal/express-engine
+ng add @nguniversal/express-engine
 ```
+
 The command updates the application code to enable SSR and adds extra files to the project structure
 
 - Builds both the server script and the application in production mode. Use this command when you want to build the project for deployment.
 ```
-$ ng build && ng run app-name:server
+ng build && ng run app-name:server
 ```
+
 - Similar to ng serve, which offers live reload during development, but uses server-side rendering
 ```
-$ npm run dev:ssr
+npm run dev:ssr
 ```
 
 ## Cuidados con SSR y Angular (15/23)
 
 ### Documentation
+
 - Angular Universal (github repo)
 https://github.com/angular/universal#angular-universal
 
@@ -112,6 +126,7 @@ La estrategia por defecto de Detección de cambios en Angular empieza enla cima 
     // changeDetection:ChangeDetectionStrategy.Default
 })
 ```
+
 La estrategía OnPush permite hacer la recarga solo en la rama afectada por el cambio. Lo cual evita recargas inecesarias y por consiguiente ejecuciones de metodos. Mejorarndo el rendimiento de nuestra aplicación.
 - "ChangeDetectionStrategy.Default" es la estrategia por defecto y se implementa si no se define ninguna.
 
@@ -119,4 +134,3 @@ La estrategía OnPush permite hacer la recarga solo en la rama afectada por el c
 
 Las subscribciones con HttpClient no necesitan hacer unsubscribe, puesto que HttpClient finaliza la subscribcion una ves completada la petición.
 Pero otras subscribciones si es necesario finalizarlas una vez dejen de ser necesarias.
-

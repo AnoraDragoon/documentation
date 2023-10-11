@@ -18,6 +18,7 @@ git pull
 ```
 
 ## Info
+
 ```
 git --version
 ```
@@ -152,7 +153,9 @@ git config --global user.email "<user@email.com>"
 ```
 git config --global user.name "<User Name>"
 ```
+
 ### Local
+
 ```
 git config --local user.email "<user@email.com>"
 ```

@@ -56,12 +56,12 @@ touch <file_name> <file_name> <file_name>
 
 Copy a file or directory
 ```
-cp ${origin dir/file name} ${destiny dir/file name}
+cp <origin_dir/file_name> <destiny_dir/file_name>
 ```
 
 Move a file or directory
 ```
-mv ${origin dir/file name} ${destiny dir path}
+mv <origin_dir/file_name> <destiny_path>
 ```
 
 Remove file
