@@ -1,9 +1,12 @@
 # TypeScript Inheritance on Angular
 Bibligrafía: https://www.typescriptlang.org/docs/handbook/2/classes.html
+
 ## Interface Inheritance
+
 There are several way to apply interface inheritance on TypeScript
 
 ## Class Inheritance
+
 Para extender una clase se utiliza la palabra recerbada "extends", la herencia se declara
 directamente despues del nombre de la clase y antes de las implementaciones. Solo es
 posible heredar de una clase padre.
@@ -22,9 +25,11 @@ export class SimpleChild extends SimpleParent {
 ```
 
 ### OPP Principles
+
 Here, there is a documentation about SOLID principles. It could be good check it mainly Open-close principle, because this article is based on it.
 
 ## Services Inheritance
+
 Extend an Angular service is so similar to extend another kind of class in TypeScript. The most important to take account is the dependency injection applied on service constructor must not be private. Neither in the father nor in the son.
 It is possible to use inheritance on dependecy injection, that allow polymorphic substitutions.
 
