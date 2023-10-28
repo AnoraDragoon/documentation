@@ -7,13 +7,13 @@ For definitive documentation
 npm help init
 ```
 
-Fast package.json initialization. No questions.
-package.json initialiced contain default data pre-setted data from npm configuration
+Fast ``package.json`` initialization. No questions.
+``package.json`` initialiced contain default data pre-setted data from npm configuration
 ```
 npm init --yes | npm init -y
 ```
 
-Setting config values for packaga.json initialization
+Setting config values for ``packaga.json`` initialization
 ```
 npm config set init-author-name "Tu Nombre";
 npm config set init-author-email "TuEmail@email.com";

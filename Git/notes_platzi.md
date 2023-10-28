@@ -15,11 +15,12 @@ Con toda la base de datos con cambios atómicos en nuestro proyecto.
 Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos darle un poco de información sobre nosotros.
 <br>
 No debemos hacerlo todas las veces que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes comandos con tu información:
+
+```sh
+git config --global <user.email> # tu@email.com
 ```
-git config --global user.email "tu@email.com"
-```
-```
-git config --global user.name "Tu Nombre"
+```sh
+git config --global <user.name> # Tu Nombre
 ```
 
 Existen muchas otras configuraciones de Git que puedes encontrar ejecutando el comando
@@ -30,8 +31,7 @@ git config --list
 (o solo git config para ver una explicación más detallada).
 
 Si quieres ver los archivos ocultos de una carpeta puedes habilitar la opción de ``Vista > Mostrar u ocultar > Elementos ocultos`` (en Windows).
-<br>
-O ejecutar el comando ls ``-a``.
+O ejecutar el comando: ``ls -a``.
 
 ## Comandos para iniciar tu repositorio con Git
 
@@ -76,18 +76,18 @@ git rm nombre_del_archivo.txt
 ```
 
 Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
-```
-git config --global --replace-all user.name “Aquí va tu nombre modificado”
+```sh
+git config --global --replace-all <user.name> # Aquí va tu nombre modificado
 ```
 
 O si lo deseas eliminar y añadir uno nuevo.
-```
-git config --global --unset-all user.name
+```sh
+git config --global --unset-all <user.name>
 ```
 
 Elimina el nombre del usuario.
-```
-git config --global --add user.name “Aquí va tu nombre”
+```bash
+git config --global --add <user.name> # Aquí va tu nombre
 ```
 
 ## Comandos para analizar cambios en GIT
@@ -99,11 +99,11 @@ git init
 
 Agregar el archivo al repositorio.
 ```
-git add nombre_de_archivo.extensión
+git add <nombre_de_archivo.extensión>
 ```
 
 Agregamos los cambios para el repositorio.
-```
+```sh
 git commit -m “Mensaje”
 ```
 
@@ -119,7 +119,7 @@ git status
 
 Histórico de cambios con detalles.
 ```
-git log nombre_de_archivos.extensión
+git log <nombre_de_archivos.extensión>
 ```
 
 Envía a otro repositorio remoto lo que estamos haciendo.
@@ -131,6 +131,8 @@ Traer repositorio remoto.
 ```
 git pull
 ```
+
+## Commandos de basicos de terminal útiles
 
 Listado de carpetas en donde me encuentro. Es decir, como emplear dir en windows.
 ```
@@ -144,12 +146,12 @@ pwd
 
 Make directory nueva carpeta.
 ```
-mkdir
+mkdir <dir-path>
 ```
 
 Crear archivo vacío.
 ```
-touch archivo.extensión
+touch <archivo.extensión>
 ```
 
 Muestra el contenido del archivo.
@@ -164,7 +166,7 @@ history
 
 Eliminación de archivo.
 ```
-rm archivo.extensión
+rm <archivo.extensión>
 ```
 
 Ayuda sobre el comando.
@@ -179,7 +181,7 @@ git checkout
 
 Se utiliza para devolver el archivo que se tiene en ram. Cuando escribimos git add, lo devuelve a estado natural mientras está en staging.
 ```
-git rm --cached archivo.extensión
+git rm --cached <archivo.extensión>
 ```
 
 Muestra la lista de configuración de git.
@@ -275,7 +277,7 @@ git push origin --tags.
 ```
 Borrar un tag del repositorio remoto:
 ```
-git tag -d nombre-del-tag y git push origin :refs/tags/tag-name
+git tag -d nombre-del-tag y git push origin :refs/tags/<tag-name>
 ```
 
 ## Alias:

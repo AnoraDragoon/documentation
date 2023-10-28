@@ -3,7 +3,7 @@
 No vamos a instalar TypeScript de manera global, sino solo para el proyecto, ya que normalmente así se hace en mundo real. Se trabaja por proyecto.
 
 - Creamos una carpeta para nuestro proyecto
-```
+```sh
 mkdir ts-project && cd ts-project
 ```
 - Abrimos nuestro editor de código desde la ubicación de la carpeta del proyecto.
@@ -16,8 +16,8 @@ mkdir ts-project && cd ts-project
 ```
 mkdir src
 ```
-- Ahora crearemos nuestro archivo package.json de manera simple desde la terminal y dentro de la ruta del proyecto:
-```
+- Ahora crearemos nuestro archivo ``package.json`` de manera simple desde la terminal y dentro de la ruta del proyecto:
+```sh
 npm init -y
 ```
 - Finalmente, instalemos TypeScript 😊. Desde la terminal y dentro de la ruta del proyecto, ejecuta:
