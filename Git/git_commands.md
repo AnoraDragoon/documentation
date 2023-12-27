@@ -182,3 +182,17 @@ git update-index --no-skip-worktree <file_name>
 ```
 git ls-files -v|grep '^S'
 ```
+## Stash
+
+```
+git stash save --keep-index --include-untracked
+```
+```
+git stash drop
+```
+```
+git restore <path/to/file/to/revert>
+```
+```
+git checkout -- <path/to/file/to/revert>
+```
