@@ -1,16 +1,16 @@
 # Curso de Frameworks y Librerías de JavaScript
 
-### Qué es reactividad (4/28)
+## Qué es reactividad (4/28)
 
-[Exploring the state of reactivity patterns in 2020 - JavaScript inDepth] (https://angularindepth.com/posts/1280/exploring-the-state-of-reactivity-patterns-in-2020)
+[Exploring the state of reactivity patterns in 2020 - JavaScript inDepth] (<https://angularindepth.com/posts/1280/exploring-the-state-of-reactivity-patterns-in-2020>)
 
-[Virtual DOM is pure overhead] (https://svelte.dev/blog/virtual-dom-is-pure-overhead)
+[Virtual DOM is pure overhead] (<https://svelte.dev/blog/virtual-dom-is-pure-overhead>)
 
-[Reactive programming, DAMN. It is not about ReactJS] (https://samueleresca.net/reactive-programming-damn-it-is-not-about-reactjs/)
+[Reactive programming, DAMN. It is not about ReactJS] (<https://samueleresca.net/reactive-programming-damn-it-is-not-about-reactjs/>)
 
-### Ecosistema de frameworks y librerías JavaScript (6/28)
+## Ecosistema de frameworks y librerías JavaScript (6/28)
 
-#### Empaqutadores
+### Empaqutadores
 
 - Webpack
 - Parcel
@@ -18,35 +18,35 @@
 
 Reading:
 
-- https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c
-- https://platzi.com/blog/empaquetadores-javascript/
+- <https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c>
+- <https://platzi.com/blog/empaquetadores-javascript/>
 
-#### Lenguajes y transpiladores
+### Lenguajes y transpiladores
 
 - Babel
 - TypeScript
 
-#### UI Tools
+### UI Tools
 
-- React https://react.dev/
-- Vue.js https://vuejs.org/
-- Svelte https://svelte.dev/
-- Polymer Library https://polymer-library.polymer-project.org/
-- BReact https://breact.ai/
+- React <https://react.dev/>
+- Vue.js <https://vuejs.org/>
+- Svelte <https://svelte.dev/>
+- Polymer Library <https://polymer-library.polymer-project.org/>
+- BReact <https://breact.ai/>
 
-#### CSS y preprocesadores
+### CSS y preprocesadores
 
 - Sass
 - Less
 - Stylus
 - PostCSS
 
-#### CSS in JS
+### CSS in JS
 
 - StyledComponents
 - Emotion
 
-#### Routers
+### Routers
 
 - React Router
 - Vue Router
@@ -56,11 +56,11 @@ Reading:
 - LitElement Router
 - Whatever Router
 
-#### Frameworks
+### Frameworks
 
 - Angular
 
-#### Entornos de desarrollo
+### Entornos de desarrollo
 
 - Create React App
 - Vue CLI
@@ -69,15 +69,13 @@ Reading:
 - Whatever CLI
 - Angular CLI
 
-#### Manejo del estado
+### Manejo del estado
 
 - Redux
 - XState
 - ModX
 
-#### Consulta de datos
+### Consulta de datos
 
 - API Rest
 - GraphQL
-
-

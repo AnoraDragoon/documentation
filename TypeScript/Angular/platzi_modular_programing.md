@@ -4,7 +4,7 @@
 - Cómo hacer precarga de todos los módulos.
 Importando PreloadAllModules desde `@angular/router`, lo pasas como parámetro al import en el decorador `@NgModule()`. De esta manera, se cargarán en el primer render TODOS los módulos que tu aplicación tenga, pudiendo ver por consola algo como lo siguiente.
 
-```
+```typescript
 // app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
