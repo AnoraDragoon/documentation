@@ -62,3 +62,33 @@ En los casos que nos competen:
 
 - `ProductoCrudRepository` no es un componente de Spring en si mismo, pero hereda de `CrudRepository` que si lo es gracias al decorador: `@NoRepositoryBean`.
 - `ProductMapper` es un componente de Spring ya que su decorador `@Mapper` lo incluye de manera dínamica como componente de Spring por medio del atributo: `componentModel = "spring"`.
+
+## Desplegar nuestra API desde la ventana de comandos (32)
+
+### Opciones de Gradle
+
+Etremo derecho del ID (IntelliJ IDEA) > Gradle: Abre el panel de opciones de Gradle, a la derecha.
+
+Opciones a utilizar:
+
+- Project_name > Tasks > application > bootRun: Ejecuta la applicación por medio del IDE.
+- Project_name > Tasks > build > bootJar: Construye el .jar de nuestro proyecto.
+
+> **Nota:** La versión se especifica en el archivo `build.gradle`.
+
+### Ejecución del ejecutable por terminal
+
+Commando:
+
+```sh
+java -jar <application/path>
+```
+
+Flags:
+
+- `-Xmx2048m`: Tamaño en memoria asginado a la aplicación.
+- `-Dspring.profile.active=pdn`: Asignar perfil `pdn`.
+- `-Dserver.port=88`: Asignar puerto.
+
+> **Nota:** Las propiedades de la applicación que se definen en el fichero: `src/resources/application.properties` se pueden estableser o sobreescribir en el momento de la ejecución. Solo se necesita agregarlo como una flag en el comando anteponiendo una `D` mayuscula.
+> Ejemplo:`spring.profile.active=pdn` => `-Dspring.profile.active=pdn`
