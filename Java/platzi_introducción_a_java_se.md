@@ -90,7 +90,6 @@ Para que el IDE muestre la descripción y documentación de las funciones debemo
 
 ## Tags Java Docs (30 / 39)
 
-
 | Tag            | Description                                                                                                                  | Syntax                                 |
 |----------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
 | @author        | Adds the author of a class.                                                                                                   | @author name-text                      |
