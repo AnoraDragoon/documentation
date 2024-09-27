@@ -83,10 +83,10 @@ rm -r <dir_name> <dir_name> ...
 
 ### Vistazo rápido al contenido usando los comandos Head y Tail
 
-```
+```sh
 head -n 20 proyecto.html
 ```
-```
+```sh
 less <file_dir>
 ```
 
@@ -130,6 +130,16 @@ Si cerramos y volvemos a abrir la terminal, el alias creado con el comando alias
 ### Documentation
 
 [Comandos que debes conocer.](https://platzi.com/blog/41-comandos-terminal/)
+
+## Variables de entorno
+
+Es posible añadir alias y variables de entorno a nuestra terminal.
+Las varibles de entornos nos permiten como su nombre lo indica asignar un valor a una variable y usarla en nuestra terminal como ese valor. Una URL o la dirección de tu espacio de trabajo son algunos ejemplos
+
+Crear una variable de entorno.
+```sh
+export WORKSPACE=$HOME/workspace
+```
 
 ## Personalizar la terminal de comandos (21/23)
 
@@ -186,3 +196,10 @@ p10k configure
 - [Oh My Zsh](https://ohmyz.sh/)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Personaliza tu terminal con Oh My ZSH y Powerlevel10k | codevars](https://www.edevars.com/blog/personalizar-terminal)
+
+## Procesos automatizados en Linux
+
+Crontab o cronJob
+<br>
+Un trigger en inversión y actualización para sustituir las tareas diarias de actualización.
+Las vistas materializadas si deben hacerse de forma diaria y excluirlas del trigger. (Antes de consultar Tableau)
