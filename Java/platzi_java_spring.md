@@ -52,6 +52,15 @@ Documentation: <https://mapstruct.org/>
 
 MapStruct Plugin for Intellij Idea : <https://plugins.jetbrains.com/plugin/10036-mapstruct-support>
 
+## Orientar nuestra API al dominio con MapStruct (20)
+
+From package: org.mapstruct
+
+- @Mapper
+- @Mappings
+- @Mapping
+- @InheritInverseConfiguration
+
 ## Inyección de dependencias (22)
 
 Documentación: <https://reflectoring.io/constructor-injection/>
