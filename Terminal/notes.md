@@ -9,6 +9,7 @@ La carpeta con el símbolo "``/``" es la raíz, ahí es donde comienza todo el s
 ``
 miguelangel@DESKTOP-3R804MK:~$
 ``
+
 - ``miguelangel`` : es el nombre del usuario que está activo. En tu caso aparecerá el nombre del usuario que esté activo en tu computadora.
 - ``DESKTOP-3R804MK`` : es el nombre que el sistema operativo le dio a la computadora. En este caso se usa Windows y ese es el nombre que en la instalación Windows le asignó al dispositivo. Si usas Linux aparecerá el nombre del PC que hayas colocado en la instalación.
 - ``~`` : es la carpeta en la que te encuentras y ahora es cuando empiezan las confusiones porque en el esquema no estaba una carpeta con ese símbolo. Más adelante verás como todo tiene sentido.
@@ -17,67 +18,76 @@ miguelangel@DESKTOP-3R804MK:~$
 ### Commands
 
 Conocer la ruta actual (Paht working directory)
+
 ```
 pwd
 ```
 
 Move to a directory (Change directory)
+
 ```
 cd <dir_path>
 ```
 
 Show dir content (List)
+
 ```
 ls
 ```
 
 - Flags for ls:
-    - ``-a`` : (all) Muestra todos los elementos (files/directories) incluyendo los ocultos.
-    - ``-l`` : (Long) Muestra los elementos y detalles en formato tabulado.
-    - ``-h <dir_name>`` : (Human Readable)
-
+  - ``-a`` : (all) Muestra todos los elementos (files/directories) incluyendo los ocultos.
+  - ``-l`` : (Long) Muestra los elementos y detalles en formato tabulado.
+  - ``-h <dir_name>`` : (Human Readable)
 
 ## Manipulando archivos y directorios (4/23)
 
 Cómo crear un directorio (mkdir)
+
 ```
 mkdir <dir_name>
 ```
 
 También puedes crear varios directorios al mismo tiempo.
+
 ```
 mkdir <dir_name> <dir_name>
 ```
 
 Cómo crear archivos (touch)
+
 ```
 touch <file_name> <file_name> <file_name>
 ```
 
 Copy a file or directory
+
 ```
 cp <origin_dir/file_name> <destiny_dir/file_name>
 ```
 
 Move a file or directory
+
 ```
 mv <origin_dir/file_name> <destiny_path>
 ```
 
 Remove file
+
 ```
 rm <file_name> <file_name> ...
 ```
 
 Remove directory
+
 ```
 rm -r <dir_name> <dir_name> ...
 ```
 
 - El comando rm tiene varias opciones (Flags). Las más usadas son:
-    - ``-i`` (de interactive) te pregunta si estás seguro de eliminar el archivo
-    - ``-r`` (de recursive) elimina todo lo que esté dentro de una carpeta
-    - ``-f`` or ``--force`` (de force) fuerza a borrar todo.
+  - ``-i`` (de interactive) te pregunta si estás seguro de eliminar el archivo
+  - ``-r`` (de recursive) elimina todo lo que esté dentro de una carpeta
+  - ``-f`` or ``--force`` (de force) fuerza a borrar todo.
 
 ## Explorando el contenido de nuestros archivos (5/23)
 
@@ -86,6 +96,7 @@ rm -r <dir_name> <dir_name> ...
 ```sh
 head -n 20 proyecto.html
 ```
+
 ```sh
 less <file_dir>
 ```
@@ -99,6 +110,7 @@ Además, puedes buscar palabras dentro del documento. Si presionas la tecla slas
 Para salir de la interfaz de less presiona “`q`”.
 
 ### Tabla de comandos
+
 | Syntax | Description |
 | --- | ----------- |
 | head | Muestra las primeras 10 líneas |
@@ -109,7 +121,7 @@ Para salir de la interfaz de less presiona “`q`”.
 
 ## ¿Qué es un comando? (6/23)
 
-### Un comando pueden significar cuatro cosas:
+### Un comando pueden significar cuatro cosas
 
 Un programa ejecutable
 Un comando de utilidad de la shell. Esto es un programa en sí mismo, que puede tener funciones. Ejemplo cd
@@ -137,6 +149,7 @@ Es posible añadir alias y variables de entorno a nuestra terminal.
 Las varibles de entornos nos permiten como su nombre lo indica asignar un valor a una variable y usarla en nuestra terminal como ese valor. Una URL o la dirección de tu espacio de trabajo son algunos ejemplos
 
 Crear una variable de entorno.
+
 ```sh
 export WORKSPACE=$HOME/workspace
 ```
@@ -144,39 +157,44 @@ export WORKSPACE=$HOME/workspace
 ## Personalizar la terminal de comandos (21/23)
 
 1. Instala Tilix
+
 ```
 sudo apt install tilix
 ```
 
 2. Instala ZSH
+
 ```
 sudo apt install zsh
 ```
 
 Comando para dejar por DEFECTO la shell de bash o zsh:
-<br>
+\
 ``chsh -s $(which bash)`` or ``chsh -s $(which zsh)``
 
 Para cambiar entre bash y zsh en el momento o reinicial la shell actual:
-<br>
+\
 ``exec bash`` or ``exec zsh``
 
 3. Personaliza funcionalidades y colores
 Ahora, puedes ponerle funcionalidades y colores con OH-MY-ZSH
+
 ```
 sh-c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 4. Usa Power Level
-<br>
+\
 Vamos a instalarle un tema (powerLevel10K):
+
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Documentation: https://github.com/romkatv/powerlevel10k#powerlevel10k
+Documentation: <https://github.com/romkatv/powerlevel10k#powerlevel10k>
 
 Agregar powerlevel10 a ZSH:
+
 ```
 vim ~/.zshrc
 ```
@@ -184,6 +202,7 @@ vim ~/.zshrc
 ``ZSH_THEME="powerlevel10k/powerlevel10k"``
 
 Reconfigurar Powerlevel10k
+
 ```
 p10k configure
 ```
@@ -200,6 +219,6 @@ p10k configure
 ## Procesos automatizados en Linux
 
 Crontab o cronJob
-<br>
+\
 Un trigger en inversión y actualización para sustituir las tareas diarias de actualización.
 Las vistas materializadas si deben hacerse de forma diaria y excluirlas del trigger. (Antes de consultar Tableau)

@@ -30,7 +30,7 @@ On windows terminal look for `Open JSON file` and on JSON file:
 
 - `settings.json` > `schemes` add a new scheme.
 
-Color scheme example for terminal: https://github.com/Richienb/windows-terminal-snazzy/blob/main/snazzy.json
+Color scheme example for terminal: <https://github.com/Richienb/windows-terminal-snazzy/blob/main/snazzy.json>
 
 - Goback to terminal and:
 - Color schemes > choose scheme > Click on Set as default.
@@ -40,6 +40,7 @@ Color scheme example for terminal: https://github.com/Richienb/windows-terminal-
 
 - Install winget (App Installer) from Microsoft Store.
 - Run next commnad:
+
 ```
 winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
@@ -48,23 +49,26 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 - Run windows terminal as administrator.
 - Run next command:
+
 ```
 oh-my-posh font install
 ```
+
 - Select a font.
-<br>
+\
 Documentation recomend: "Meslo".
-<br>
+\
 Tutorial use: "FiraCode".
 
 - Restart windows terminal as user.
 - Profiles > Defaults > Appearance > Font Face = "MesloLGL Nerd Font Mono".
-<br>
+\
 Tutorial use: "FiraCode Nerd Font Mono".
 
 ### Activate prompt theme
 
 - Init Oh my posh theme
+
 ```
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 ```
@@ -76,33 +80,36 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 ```
 
 - Show Oh my posh themes
+
 ```
 Get-PoshThemes 
 ```
 
 - Ctrl+click on theme name to open theme file.
 - Run next command to open Shell Profile file:
+
 ```
 notepad $PROFILE
 ```
 
 If your notepad show a modal message like this: "The system cannot find the path specified."
-<br>
+\
 It is necessary to run another command first.
+
 ```
 New-Item -Path $PROFILE -Type File -Force
 ```
 
 - After that it is possible open `$PROFILE` with Notepad or VSCode.
-<br>
+\
 From Terminal or Win+R run:
-<!-- <br> -->
+<!-- \ -->
 ``notepad $PROFILE`` or ``code $PROFILE``
 
 - Type configuration command into PowerShell profile file:
-<br>
+\
 `$HOME_ROOT` : User root
-<br>
+\
 `$PoshThemes_name` : theme file name.
 
 ```
@@ -113,29 +120,32 @@ From Terminal or Win+R run:
 
 - Run next command to install icons module PSGallery.
 
-```
+```sh
 Install-Module -name Terminal-Icons -Repository PSGallery
 ```
 
 - Run next command to Activate icons module PSGallery.
 
-```
+```sh
 Import-Module Terminal-Icons
 ```
 
 To persist this change when terminal start it is necessary add this configuration to terminal profile file.
+
 - Open profile file located:
-<br>
+\
 `$HOME_ROOT\PowerShell\Microsoft.PowerShell_profile.ps1`
 
-```
+```sh
 notepad $PROFILE
 ```
+
 - And add a new line:
-<br>
+\
 ```Import-Module Terminal-Icons```
 
 - To show Read line option as a list run:
+
 ```
 Set-PSReadLineOption -PredictionViewStyle ListView
 ```

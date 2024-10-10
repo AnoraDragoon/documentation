@@ -1,6 +1,6 @@
 # Customization an Angular project using inheritance
 
-Bibligrafía: https://www.typescriptlang.org/docs/handbook/2/classes.html
+Bibligrafía: <https://www.typescriptlang.org/docs/handbook/2/classes.html>
 
 ## Project Structure
 
@@ -43,9 +43,10 @@ export * from './shared';
 
 To create a custom routing module, it is necessary to customize anything. Inheritance is not applied over Angular Modules class is usually empty.
 
-#### To create a new module in custom folder (src/app/custom).
+#### To create a new module in custom folder (src/app/custom)
 
 - Create a new module
+
 ```
 ng generate module custom/app-routing --flat
 ```
@@ -53,7 +54,6 @@ ng generate module custom/app-routing --flat
 - Add RoutingModule from angular route.
 - Create routes like core routing or copy the module.
 - Update routes.
-
 
 ```ts
 // Routing module example
@@ -129,7 +129,6 @@ export class RetailModule { }
 
 There are several way to apply interface inheritance on TypeScript.
 
-
 [Interface documentation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces)
 
 ```ts
@@ -144,6 +143,7 @@ export interface IParentUserModel {
 ```
 
 Standar extend. Extends every parent attributes and, can add new ones.
+
 ```ts
 // Standar extend
 
@@ -153,8 +153,9 @@ export interface IChildUserModel extends IParentUserModel {
     status: boolean;
 }
 ```
+
 Partial extend. Extends every parent attributes as optional, can add new ones.
-<br>
+\
 ``{ id?: string, name?: string, ... }``
 
 ```ts
@@ -176,7 +177,9 @@ export interface INewChildModel extends Omit<IChildUserModel, 'id' | 'status'> {
     password: string;
 }
 ```
+
 Pick extend. Extends only parent attributes mentioned (email), can add new ones.
+
 ```ts
 // Pick extend
 
@@ -212,7 +215,7 @@ export class SimpleChild extends SimpleParent {
 ### Overwrite
 
 Public and protected attributes and functions can be overridden. The overwritten elements are the ones used by default. It is possible to call the original function once it has been overridden, but it must be done explicitly (super.function). The rest of the attributes that are not functions are not accessible using (``super``).
-<br>
+\
 Example: "src/app/child/pages/child-page/child-page.component.ts"
 
 ### OPP Principles
@@ -329,12 +332,9 @@ The attributes of the component are independent of class extension. It is possib
 
 ## Pipes Inheritance
 
-
 ## Guards Inheritance
 
-
 ## Modules Inheritance
-
 
 ## Index routing
 
@@ -344,7 +344,6 @@ To create an index.ts file that exports all parent classes that can be extended 
 export { SingleParentService } from './services/single-parent.service';
 export * from './shared';
 ```
-
 
 Los page components no ejecutan funciones heredadas del ciclo de vida del componente.
 

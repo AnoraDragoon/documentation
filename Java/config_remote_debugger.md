@@ -36,13 +36,13 @@ Debugging a Spring Boot application running in a Docker container involves a few
    - **In IntelliJ IDEA:**
 
      > Go to **Run** > **Edit Configurations**.
-     > <br>
+     > \
      > Click **+** and select **Remote**.
-     > <br>
+     > \
      > Set a descriptive name.
-     > <br>
+     > \
      > Set the host to `<environment_URL>` (horizon-app.tt085int.dev.sicpa.io) and the port to 8787.
-     > <br>
+     > \
      > Apply the configuration and start debugging.
 
    - **In Visual Studio Code:**
@@ -50,9 +50,9 @@ Debugging a Spring Boot application running in a Docker container involves a few
      First of all, it is required to have installed extension: [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug)
 
      > Go to **Run** > **Add Configuration...** > **Java**
-     > <br>
+     > \
      > Add to `launch.json` file next configuration:
-     > <br>
+     > \
      > Save the configuration and start debugging.
 
      `launch.json`
