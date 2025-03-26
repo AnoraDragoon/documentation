@@ -85,7 +85,53 @@ Opciones a utilizar:
 
 > **Nota:** La versión se especifica en el archivo `build.gradle`.
 
-### Ejecución del ejecutable por terminal
+## Documentar nuestra API con Swagger (31)
+
+Maven Repository >> Buscar las siguientes dependencias "Swagger2" y "swagger-ui".\
+Añadirlas a nuestro build.gradle
+
+```java
+ implementation 'io.springfox:springfox-swagger2:2.9.2'
+ implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+```
+
+Añadir nueva clase de java en `src/main/java/com/platzi/market/web/config/SwaggerConfig.java`.
+
+Añadir el siguiente código.
+
+```java
+package com.platzi.market.web.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2).select()
+                .apis(RequestHandlerSelectors.basePackage("com.platzi.market.web.controller"))
+                .build();
+    }
+}
+
+```
+
+API help URL: `http://localhost:8090/platzi-market/api/swagger-ui.html`
+
+- Protocolo: `http`
+- Hostname: `localhost`
+- Port: `8090`
+- Context: `platzi-market/api`
+- const: `swagger-ui.html`
+
+### Ejecución del ejecutable por terminal (32)
 
 Commando:
 

@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "4f4da33d21103fde",
+    "type": "split",
+    "children": [
+      {
+        "id": "a8a8688868907804",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c61e4b2d8776f2a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git/notes_platzi.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "86089a16deb95720",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TypeScript/platzi_curso_de_fundamentos_de_type_script.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "085f735177839247",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6ec2ebc3e768321",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "002edf902f048b62",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0198aa2c410bc5a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "09e16e80b95c77ba",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e4be031e845c26d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "bfa4b4e9e34b1f68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4297b20835a86003",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Git/notes_platzi.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "987efdfb96641d76",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Git/notes_platzi.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd6c995663bf3d0e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "005632a5ddaa8fc0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Git/notes_platzi.md"
+              }
+            }
+          },
+          {
+            "id": "c52490342b4d41a5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo canvas": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "c61e4b2d8776f2a9",
+  "lastOpenFiles": [
+    "TypeScript/Angular/typescript_inheritance_on_angular.md",
+    "Terminal/wondows_protips.md",
+    "TypeScript/platzi_curso_de_fundamentos_de_type_script.md",
+    "Terminal/setup_windows_terminal.md",
+    "Git/notes.md",
+    "Git/git_commands.md",
+    "Terminal/notes.md",
+    "JavaScript/NPM_notes.md",
+    "JavaScript/Ext_JS.md",
+    "Terminal/setting_window.md",
+    "Docker/Pelado_nerd_de_novato_a_pro.md"
+  ]
+}
