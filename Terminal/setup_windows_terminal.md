@@ -41,16 +41,18 @@ Color scheme example for terminal: <https://github.com/Richienb/windows-terminal
 - Install winget (App Installer) from Microsoft Store.
 - Run next commnad:
 
-```
+```sh
 winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
+
+> Now it is possible to install OhMyPosh from Microsoft Store
 
 ### Install custom fonts
 
 - Run windows terminal as administrator.
 - Run next command:
 
-```
+```sh
 oh-my-posh font install
 ```
 
@@ -65,30 +67,46 @@ Tutorial use: "FiraCode".
 \
 Tutorial use: "FiraCode Nerd Font Mono".
 
+> It is possible to install favorite font as command param
+
+```sh
+oh-my-posh font install meslo
+```
+
+- Visual Studio Code
+  Tu use installed font into VSCode terminal it is required to add next line into `settings.json`
+  `"terminal.integrated.fontFamily": "MesloLGL Nerd Font Mono"`
+
 ### Activate prompt theme
 
 - Init Oh my posh theme
 
-```
+```sh
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 ```
 
+> My favorite theme is: `$env:POSH_THEMES_PATH/zash.omp.json`
+
 - Previews command throw another command and it is required run it.
 
-```
+> **Note:** Deprecated
+
+```pwsh
 (@(& 'C:/Users/DragoonLord/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\DragoonLord\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json' --print) -join "`n") | Invoke-Expression
 ```
 
+> **Note:** Deprecated
+
 - Show Oh my posh themes
 
-```
+```sh
 Get-PoshThemes 
 ```
 
 - Ctrl+click on theme name to open theme file.
 - Run next command to open Shell Profile file:
 
-```
+```sh
 notepad $PROFILE
 ```
 
@@ -96,7 +114,7 @@ If your notepad show a modal message like this: "The system cannot find the path
 \
 It is necessary to run another command first.
 
-```
+```sh
 New-Item -Path $PROFILE -Type File -Force
 ```
 
@@ -112,8 +130,10 @@ From Terminal or Win+R run:
 \
 `$PoshThemes_name` : theme file name.
 
-```
-(@(& '$HOME_ROOT/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\DragoonLord\AppData\Local\Programs\oh-my-posh\themes\$PoshThemes_name.omp.json' --print) -join "`n") | Invoke-Expression
+> **Note:** Better options `code $PROFILE.CurrentUserAllHosts`
+
+```sh
+code $PROFILE.CurrentUserAllHosts
 ```
 
 ### Install and activate icons gallery
@@ -136,6 +156,10 @@ To persist this change when terminal start it is necessary add this configuratio
 \
 `$HOME_ROOT\PowerShell\Microsoft.PowerShell_profile.ps1`
 
+> **Note:** Deprecated for me. Currently I use:
+
+`$HOME_ROOT\PowerShell\profile.ps1`
+
 ```sh
 notepad $PROFILE
 ```
@@ -146,8 +170,16 @@ notepad $PROFILE
 
 - To show Read line option as a list run:
 
-```
+```sh
 Set-PSReadLineOption -PredictionViewStyle ListView
 ```
 
 - To have this option available wen terminal start add above line to profile file and restart terminal.
+
+Finally profile version: `profile.ps1`
+
+```sh
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/zash.omp.json" | Invoke-Expression
+Import-Module Terminal-Icons
+Set-PSReadLineOption -PredictionViewStyle ListView
+```
