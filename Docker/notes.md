@@ -25,6 +25,7 @@ docker logs data_db-hrz_1
 ```
 
 docker_examples.sh
+
 ```sh
 docker exec -i data_db-hrz_1 psql -U ${POSTGRESQL_USER_HRZ} -d ${POSTGRESQL_DATABASE_HRZ} "select length(v.raw_data) as jsonb_data_size_kb from inspection.visit v where id = 325465;"
 

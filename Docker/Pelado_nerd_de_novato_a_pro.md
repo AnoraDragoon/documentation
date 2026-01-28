@@ -2,74 +2,87 @@
 
 ## Referencia del vide
 
-https://youtu.be/CV_Uf3Dq-EU
+<https://youtu.be/CV_Uf3Dq-EU>
 
 ## Notas
 
 ### Comandos más comunes de Docker
 
 - Run an Image:
-```
+
+```sh
 docker run image_name:tag
 ```
 
 - The tag is optional and default tag is latest.
 Example:
-```
+
+```sh
 docker run -e POSTGRES_PASSWORD=password postgres
 ```
 
 - Some times run command require extra params. In this case `-e` is to set environment vars.
 - Download Image
-```
+
+```sh
 docker pull image_name
 ```
 
 - Get Image list
-```
+
+```sh
 docker images
 ```
-```
+
+```sh
 docker images | Head
 ```
 
 - Get Container list (Only running)
-```
+
+```sh
 docker ps
 ```
 
 - List all container ()
-```
+
+```sh
 docker ps -a
 ```
 
 - Check logs
-```
+
+```sh
 docker logs container_id_o_name
 ```
 
 - Execute a command inside the container
-```
+
+```sh
 docker exec -it container_id_o_name command
 ```
 
 Example:
-```
+
+```sh
 docker exec -it j1hg234j2hg34 sh
 ```
 
 - Stop a container
-```
+
+```sh
 docker stop container_id_o_name [...container_id_o_name]
 ```
 
 - Start a container
-```
+
+```sh
 docker start container_id_o_name
 ```
 
 - Run an image on background
-```
+
+```sh
 docker run -d container_id_o_name
 ```
 
@@ -89,6 +102,7 @@ docker run -d container_id_o_name
 
 - Estructura del Dockerfile
   - Dockerfile example:
+
     ```
     # syntax=docker/dockerfile:1
     FROM ubuntu:18.04
@@ -108,7 +122,7 @@ docker run -d container_id_o_name
 
 ### Usando puertos en Docker
 
-```
+```sh
 docker run -d -p <port_lh>:<port_cn> <image_id_o_name>
 ```
 
@@ -116,7 +130,8 @@ docker run -d -p <port_lh>:<port_cn> <image_id_o_name>
 
 - Run an image using a volume (-v).
   A volume is a bidirectional link between your local computer and the container. Useful to keep data after container destruction.
-```
+
+```sh
 docker run -d -v <local_dir>:<container_dir> -p <port_lh>:<port_cn> <image_id_o_name>
 ```
 
@@ -125,18 +140,22 @@ docker run -d -v <local_dir>:<container_dir> -p <port_lh>:<port_cn> <image_id_o_
 To push image to docker hub, it is importan tag the image correctly.
 The image tag should contain namespace or user / image name : tag or version.
 Image tag should be unique on docker hub.
-```
+
+```sh
 docker tag <image_id> <image_full_name_and_tag>
 ```
 
 ### Multi Container
+
 - Create docker network
-```
+
+```sh
 docker network create <network_name>
 ```
 
 - Run image in docker network
-```
+
+```sh
 docker run -d \
   --network <network_name> --network-alias mysql \
   -v todo-mysql-data:/var/lib/mysql \
@@ -148,8 +167,10 @@ docker run -d \
 ### Docker compose
 
 The only requirement is to have docker compose installed.
+
 - Docker compose file:
-```
+
+```yml
 # file://docker-compose.yaml
 version: '3.7'
 
@@ -176,12 +197,14 @@ services:
 ```
 
 - Run docker-compose file:
-```
+
+```sh
 docker-compose up -d
 ```
 
 - Shutdown every container in docker-compose file
-```
+
+```sh
 docker-compose down
 ```
 
