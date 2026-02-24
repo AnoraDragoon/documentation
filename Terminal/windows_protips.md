@@ -11,7 +11,8 @@ netsh wlan show profiles
 ```
 
 **Example Output:**
-```
+
+```text
 Profiles on interface Wi-Fi:
 
 User profiles

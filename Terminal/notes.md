@@ -162,7 +162,7 @@ export WORKSPACE=$HOME/workspace
 sudo apt install tilix
 ```
 
-2. Instala ZSH
+1. Instala ZSH
 
 ```
 sudo apt install zsh
@@ -176,14 +176,14 @@ Para cambiar entre bash y zsh en el momento o reinicial la shell actual:
 \
 ``exec bash`` or ``exec zsh``
 
-3. Personaliza funcionalidades y colores
+1. Personaliza funcionalidades y colores
 Ahora, puedes ponerle funcionalidades y colores con OH-MY-ZSH
 
 ```
 sh-c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
-4. Usa Power Level
+1. Usa Power Level
 \
 Vamos a instalarle un tema (powerLevel10K):
 
