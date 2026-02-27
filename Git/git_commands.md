@@ -166,7 +166,7 @@ List local branches that match a pattern
 git branch | grep <pattern>
 ```
 
-### Remote
+### Remote Branches
 
 List repositories.
 
@@ -216,7 +216,7 @@ git init
 git remote add <repository name> <URL>
 ```
 
-### Remote
+### Remote Config
 
 #### Upload
 

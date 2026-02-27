@@ -5,7 +5,7 @@
 Le indicaremos a Git que queremos crear un nuevo repositorio para utilizar su sistema de control de versiones.
 Solo debemos posicionarnos en la carpeta raíz de nuestro proyecto y ejecutar el comando:
 
-```
+```bash
 git init
 ```
 
@@ -17,17 +17,17 @@ Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos
 \
 No debemos hacerlo todas las veces que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes comandos con tu información:
 
-```sh
+```bash
 git config --global <user.email> # tu@email.com
 ```
 
-```sh
+```bash
 git config --global <user.name> # Tu Nombre
 ```
 
 Existen muchas otras configuraciones de Git que puedes encontrar ejecutando el comando
 
-```
+```bash
 git config --list
 ```
 
@@ -40,61 +40,61 @@ O ejecutar el comando: ``ls -a``.
 
 Para inicializar el repositorio git y el staged.
 
-```
+```bash
 git init
 ```
 
 Enviar el archivo al staged.
 
-```
+```bash
 git add <path>
 ```
 
 Ver el estado, si se requiere agregar al starget o si se requiere commit.
 
-```
+```bash
 git status
 ```
 
 Para ver las posibles configuraciones.
 
-```
+```bash
 git conf
 ```
 
 Para ver la lista de configuraciones hechas.
 
-```
+```bash
 git conf --list
 ```
 
 Para mostrar las configuraciones y sus rutas.
 
-```
+```bash
 git conf --list --show-origin
 ```
 
 Para eliminar el archivo del staged(ram).
 
-```
+```bash
 git rm --cached nombre_del_archivo.txt
 ```
 
 Para eliminar del repositorio.
 
-```
+```bash
 git rm nombre_del_archivo.txt
 ```
 
 Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
 
-```sh
+```bash
 git config --global --replace-all <user.name> # Aquí va tu nombre modificado
 ```
 
 O si lo deseas eliminar y añadir uno nuevo.
 
-```sh
+```bash
 git config --global --unset-all <user.name>
 ```
 
@@ -108,19 +108,19 @@ git config --global --add <user.name> # Aquí va tu nombre
 
 Inicializar el repositorio.
 
-```
+```bash
 git init
 ```
 
 Agregar el archivo al repositorio.
 
-```
+```bash
 git add <nombre_de_archivo.extensión>
 ```
 
 Agregamos los cambios para el repositorio.
 
-```sh
+```bash
 git commit -m “Mensaje”
 ```
 
@@ -294,7 +294,7 @@ cat ~/.ssh/id_rsa.pub
 
 ``git remote set-url <remote-name> <url-ssh-del-repositorio-en-github>``
 
-```sh
+```bash
 git remote set-url origin git@github.com:AnoraDragoon/documentation.git
 ```
 
@@ -306,25 +306,25 @@ URL to config public ssh key in github
 
 Crear un nuevo tag y asignarlo a un commit:
 
-```sh
+```bash
 git tag -a nombre-del-tag id-del-commit
 ```
 
 Borrar un tag en el repositorio local:
 
-```sh
+```bash
 git tag -d nombre-del-tag.
 ```
 
 Listar los tags de nuestro repositorio local:
 
-```sh
+```bash
 git tag o git show-ref --tags.
 ```
 
 Publicar un tag en el repositorio remoto:
 
-```sh
+```bash
 git push origin --tags.
 ```
 

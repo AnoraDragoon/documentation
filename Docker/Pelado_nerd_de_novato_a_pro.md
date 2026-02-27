@@ -50,7 +50,7 @@ docker images | head
 
 **Example output:**
 
-```
+```text
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 nginx         1.25      a6bd71f48f68   2 weeks ago    187MB
 postgres      15        9f3ec01f884d   3 weeks ago    412MB
@@ -69,7 +69,7 @@ docker ps -a
 
 **Example output:**
 
-```
+```text
 CONTAINER ID   IMAGE          STATUS         PORTS                    NAMES
 f3a52c1b8d9e   nginx:1.25     Up 2 hours     0.0.0.0:8080->80/tcp     web-server
 a1b2c3d4e5f6   postgres:15    Up 30 minutes  0.0.0.0:5432->5432/tcp   my-database
