@@ -10,7 +10,6 @@ Para Windows y consolas (Xbox), el estándar es **MSVC**. No instalaremos el IDE
 
 ```bash
 cl /Bv
-
 ```
 
 _Debe indicar "for x64" al final._
